@@ -7,8 +7,17 @@ import org.lessons.java.pojo.Cane;
 import org.lessons.java.pojo.Delfino;
 import org.lessons.java.pojo.Passerotto;
 import org.lessons.java.pojo.abs.Animale;
+import org.lessons.java.pojo.inter.IVolante;
+import org.lessons.java.pojo.inter.INuotante;
 
 public class Main {
+	
+	public static void faiVolare(IVolante volante) {
+		volante.vola();
+	};
+	public static void faiNuotare(INuotante nuotante) {
+		nuotante.nuota();
+	};
 
 	public static void main(String[] args) {
 		
@@ -34,6 +43,31 @@ public class Main {
 			an.getMangia();
 			
 		}
+		
+		IVolante[] volanti = new IVolante[2];
+		
+		volanti[0] = p;
+		volanti[1] = a;
+		
+		for (int i = 0; i < volanti.length; i++) {
+			
+			IVolante volante = volanti[i];
+			
+			faiVolare(volante);
+		}
+		
+		INuotante[] nuotanti = new INuotante[2];
+		
+		nuotanti[0] = c;
+		nuotanti[1] = d;
+		
+		for (int i = 0; i < nuotanti.length; i++) {
+			
+			INuotante nuotante = nuotanti[i];
+			
+			faiNuotare(nuotante);
+		}
+
 	}
 
 }

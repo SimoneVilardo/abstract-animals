@@ -38,7 +38,7 @@ public class Main {
 			Animale an = animali[i];
 			
 			System.out.println(an);
-			an.sleep();
+			an.dormi();
 			an.getVerso();
 			an.getMangia();
 			

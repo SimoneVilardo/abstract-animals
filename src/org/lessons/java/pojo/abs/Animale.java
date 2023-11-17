@@ -21,7 +21,7 @@ public abstract class Animale {
 		this.nome = nome;
 	}
 	
-	public void sleep() {
+	public void dormi() {
 		
 		System.out.println("Verso mentre dorme = 'Zzz'");
 		
